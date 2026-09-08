@@ -4,3 +4,11 @@ tools:
   - tree
   - unzip
   - tar
+
+nginx_pidfile: /run/nginx.pid
+nginx_remove_default_vhost: true
+nginx_vhosts:
+  - listen: "80 default_server"
+    server_name: "_"
+    root: "/var/www/html"
+    index: "index.html index.htm"
